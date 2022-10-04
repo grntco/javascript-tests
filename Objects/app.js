@@ -58,3 +58,40 @@ multiplyNumeric(menu);
 console.log(menu.width);
 console.log(menu.height);
 console.log(menu.title);
+
+
+
+//MDN article on Objects Basics
+const person = {
+    name: {
+      first: 'Bob',
+      last: 'Smith',
+    },
+    age: 32,
+    bio() {
+      console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+    },
+    introduceSelf: function() {
+      console.log(`Hi! I'm ${this.name.first}.`);
+    }
+  };
+
+  person.age = 45;
+  person['name']['last'] = 'Cratchit';
+  person['eyes'] = 'hazel';
+  person.farwell = function() {
+    console.log('Bye everybody!');
+  }
+
+  const myDataName = 'height';
+  const myDataValue = '1.75m';
+  person[myDataName] = myDataValue;
+
+  function Person(name) {
+    this.name = name;
+    this.introduceSelf = function() {
+      console.log(`Hi! I'm ${this.name}.`);
+    }
+  }
+  const salva = new Person('Salva');
+  const frankie = new Person('Frankie');
